@@ -1,0 +1,105 @@
+.Header {
+    background-color: #2231AA;
+    width: auto;
+    height: 84px;
+}
+
+.Header__container {
+    display: flex;
+    margin: auto;
+    height: 84px;
+}
+
+.Search__container {
+    border-left: 2px solid #5360CD;
+    border-right: 2px solid #5360CD;
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.User__container {
+    padding-left: 10px;
+    max-width: 10%;
+    padding-right: 10px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.User__name {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Background__user {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5360CD;
+}
+
+.name {
+    padding-left: 10px;
+}
+
+.Input__container {
+    display: flex;
+    height: 84px;
+    flex: 1;
+}
+
+.Input__header {
+    color: white;
+    padding-left: 25px;
+    font-size: 16px;
+    height: 82px;
+    width: 100%;
+    border: 0px;
+    background-color: #5360CD;
+    outline: none;
+}
+
+.Input__header::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+
+.del {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #5360CD;
+}
+
+.Burger {
+    border-right: 2px solid #5360CD;
+    width: 84px;
+    display: flex;
+    height: 84px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Burger__logo {
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.Search__logo {
+    cursor: pointer;
+}
+
+.User__logo {
+    cursor: pointer;
+}
