@@ -1,18 +1,11 @@
 import React from 'react';
 import cancel from '../photo/Icon-Cancel.svg'
 
-let Input = () => {
-
-    let NewPost: any = React.createRef();
-
-    let onPostChange = () => {
-        NewPost.current.value = ''
-
-    }
+let Input = (props: any) => {
 
     return (<>
-        <input className='Input__header' placeholder='Search ...' type='text' ref={NewPost} />
-        <div className='del'><img src={cancel} onClick={onPostChange} /></div>
+        <input className='Input__header' placeholder='Search ...' type='text' />
+        <div className='del' onClick={() => props.setSearch(!props.search)}><img src={cancel} /></div>
     </>
     )
 }

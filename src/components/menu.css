@@ -6,6 +6,7 @@
     min-height: 80vh;
     flex-direction: column;
     border-top: 2px solid #5360CD;
+    position: relative;
 }
 
 
@@ -21,6 +22,7 @@
 }
 
 .Home__menu {
+    background-color: white;
     height: 83px;
     display: flex;
     align-items: center;
@@ -30,6 +32,7 @@
 }
 
 .Add__menu {
+    background-color: white;
     height: 83px;
     display: flex;
     align-items: center;
@@ -39,11 +42,13 @@
 }
 
 .Emptiness {
+    background-color: white;
     width: 236px;
     height: 200px;
 }
 
 .DL__menu {
+    background-color: white;
     height: 83px;
     display: flex;
     align-items: center;

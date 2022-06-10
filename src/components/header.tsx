@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setMenuAC, setSearchAC } from '../reducers/headerSearch';
 import nameLogo from '../photo/AM.svg'
 import burgerLogo from '../photo/Bg.svg'
 import User from '../photo/User.svg'
@@ -13,41 +12,23 @@ import Input from './search';
 
 let Header = () => {
 
-    const dispatch = useDispatch()
+    const [showBurger, setShowBurger] = useState(false)
 
-    let MenuBurger = useSelector((state: any) => state.header.hiddenMenu)
+    const [showSearch, setShowSearch] = useState(false)
 
     let Users = useSelector((state: any) => state.header.users)
-
-    let Search = useSelector((state: any) => state.header.search)
-
-    let activeMenu = () => {
-        if (MenuBurger === false) {
-            dispatch(setMenuAC(true))
-        } else if (MenuBurger === true) {
-            dispatch(setMenuAC(false))
-        }
-    }
-
-    let activeSearch = () => {
-        if (Search === false) {
-            dispatch(setSearchAC(true))
-        } else if (Search === true) {
-            dispatch(setSearchAC(false))
-        }
-    }
 
     return (
         <div className="Header">
             <div className='Header__container'>
-                <div className='Burger' onClick={activeMenu} >
-                    {MenuBurger ? <img className='Burger__logo' src={cancel} /> :
+                <div className='Burger' onClick={() => setShowBurger(!showBurger)} >
+                    {showBurger ? <img className='Burger__logo' src={cancel} /> :
                         <img className='Burger__logo' src={burgerLogo} />}
                 </div>
                 <div className='Input__container'>
-                    {Search ? <Input /> : <div></div>}
+                    {showSearch ? <Input search={showSearch} setSearch={setShowSearch} /> : <div></div>}
                 </div>
-                <div className='Search__container' onClick={activeSearch} >
+                <div className='Search__container' onClick={() => setShowSearch(!showSearch)} >
                     <img className='Search__logo' src={SearchLogo} />
                 </div>
                 <div className='User__container'>
@@ -55,7 +36,7 @@ let Header = () => {
                         <img className='User__logo' src={User} />}
                 </div>
             </div>
-            {MenuBurger ? <Menu /> : null}
+            {showBurger ? <Menu /> : null}
         </div>
     );
 }
