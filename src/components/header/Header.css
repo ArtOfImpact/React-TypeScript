@@ -1,7 +1,8 @@
 .Header {
     background-color: #2231AA;
-    width: auto;
     height: 84px;
+    position: fixed;
+    width: 100%;
 }
 
 .Header__container {
@@ -23,6 +24,7 @@
 
 .User__container {
     padding-left: 10px;
+    min-width: 4%;
     max-width: 10%;
     padding-right: 10px;
     height: 84px;
@@ -104,4 +106,11 @@
 
 .User__logo {
     cursor: pointer;
+}
+
+.MC__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }

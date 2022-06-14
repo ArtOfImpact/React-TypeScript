@@ -1,13 +1,13 @@
-import './menu.css'
-import nameLogo from '../photo/AM.svg'
-import Dark from '../photo/Dark.svg'
-import activeDark from '../photo/nightMode/Dark.svg'
-import Light from '../photo/Light.svg'
-import activeLight from '../photo/nightMode/Light.svg'
+import './Menu.css'
+import nameLogo from '../../photo/iconHeader/AM.svg'
+import Dark from '../../photo/iconMenu/Dark.svg'
+import activeDark from '../../photo/nightMode/Dark.svg'
+import Light from '../../photo/iconMenu/Light.svg'
+import activeLight from '../../photo/nightMode/Light.svg'
 import { useDispatch, useSelector } from 'react-redux'
-import { setNightModeAC } from '../reducers/headerSearch'
+import { setNightModeAC } from '../../reducers/HeaderSearch'
 
-let Menu = () => {
+let Menu = (props: any) => {
 
     const dispatch = useDispatch()
 
@@ -37,7 +37,7 @@ let Menu = () => {
             <div className='Home__menu'>
                 <span>Home</span>
             </div>
-            {Users ? <div className='Add__menu'>
+            {Users ? <div className='Add__menu' onClick={() => props.setPost(!props.Post)}>
                 <span>Add post</span>
             </div> : null}
             <div className='Emptiness'></div>

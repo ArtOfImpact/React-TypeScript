@@ -1,7 +1,7 @@
 import React from 'react';
-import cancel from '../photo/Icon-Cancel.svg'
+import cancel from '../../photo/iconHeader/Icon-Cancel.svg'
 
-let Input = (props: any) => {
+let Search = (props: any) => {
 
     return (<>
         <input className='Input__header' placeholder='Search ...' type='text' />
@@ -10,4 +10,4 @@ let Input = (props: any) => {
     )
 }
 
-export default Input;
+export default Search;

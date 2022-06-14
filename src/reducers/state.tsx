@@ -1,6 +1,6 @@
 import { combineReducers, legacy_createStore as createStore } from "redux";
 import BodyText from "./BodyText";
-import HeaderSearch from './headerSearch'
+import HeaderSearch from './HeaderSearch'
 
 let reducers = combineReducers({
     header: HeaderSearch,

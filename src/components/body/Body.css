@@ -1,0 +1,134 @@
+.Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Body__black {
+    background-color: #161515;
+}
+
+.Body__container {
+    margin-top: 120px;
+    display: flex;
+    width: 736px;
+    height: 360px;
+}
+
+.Container__info {
+    width: 488px;
+    padding-right: 20px;
+}
+
+.Container__img {
+    width: 256px;
+}
+
+.Info__data {
+    color: #8D8E97;
+    width: 488px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Info__title {
+    font-size: 32px;
+    width: 488px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+.Info__black {
+    font-size: 32px;
+    width: 488px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 44px;
+    color: white;
+}
+
+.Info__text {
+    color: #8D8E97;
+    width: 488px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.Body__icon {
+    display: flex;
+    justify-content: space-between;
+    width: 736px;
+}
+
+.like__container {
+    display: flex;
+    width: 60px;
+    height: 40px;
+    align-items: center;
+    justify-content: end;
+    background-image: url(../../photo/iconBody/like.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+
+.like__container:hover {
+    background-color: #5360CD;
+    background-image: url(../../photo/iconBody/LightLike.svg);
+    cursor: pointer;
+}
+
+.dislike__container {
+    display: flex;
+    width: 60px;
+    height: 40px;
+    align-items: center;
+    justify-content: end;
+    background-image: url(../../photo/iconBody/dislike.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+
+.dislike__container:hover {
+    background-color: #FD3419;
+    background-image: url(../../photo/iconBody/BlackDislike.svg);
+    cursor: pointer;
+}
+
+.Icon__like {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Icon__black {
+    color: white;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.like__container>span {
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.dislike__container>span {
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.Icon__menu {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+hr {
+    margin-top: 20px;
+    width: 736px;
+    margin-bottom: 20px;
+}

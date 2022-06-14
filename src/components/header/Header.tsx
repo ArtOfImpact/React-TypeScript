@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import './header.css';
+import './Header.css';
 import { useDispatch, useSelector } from 'react-redux';
-import nameLogo from '../photo/AM.svg'
-import burgerLogo from '../photo/Bg.svg'
-import User from '../photo/User.svg'
-import SearchLogo from '../photo/Search.svg'
-import Menu from './menu';
-import cancel from '../photo/Icon-Cancel.svg'
-import Input from './search';
+import nameLogo from '../../photo/iconHeader/AM.svg'
+import burgerLogo from '../../photo/iconHeader/Bg.svg'
+import User from '../../photo/iconHeader/User.svg'
+import SearchLogo from '../../photo/iconHeader/Search.svg'
+import Menu from '../menu/Menu';
+import cancel from '../../photo/iconHeader/Icon-Cancel.svg'
+import Search from '../search/Search';
+import CreatePost from '../post/CreatePost';
 
 
 let Header = () => {
@@ -15,6 +16,8 @@ let Header = () => {
     const [showBurger, setShowBurger] = useState(false)
 
     const [showSearch, setShowSearch] = useState(false)
+
+    const [createPost, setCreatePost] = useState(false)
 
     let Users = useSelector((state: any) => state.header.users)
 
@@ -26,7 +29,7 @@ let Header = () => {
                         <img className='Burger__logo' src={burgerLogo} />}
                 </div>
                 <div className='Input__container'>
-                    {showSearch ? <Input search={showSearch} setSearch={setShowSearch} /> : <div></div>}
+                    {showSearch ? <Search search={showSearch} setSearch={setShowSearch} /> : <div></div>}
                 </div>
                 <div className='Search__container' onClick={() => setShowSearch(!showSearch)} >
                     <img className='Search__logo' src={SearchLogo} />
@@ -36,7 +39,10 @@ let Header = () => {
                         <img className='User__logo' src={User} />}
                 </div>
             </div>
-            {showBurger ? <Menu /> : null}
+            <div className='MC__container'>
+                {showBurger ? <Menu Post={createPost} setPost={setCreatePost} /> : null}
+                {createPost ? <CreatePost setPost={setCreatePost} /> : null}
+            </div>
         </div>
     );
 }

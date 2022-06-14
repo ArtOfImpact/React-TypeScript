@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Body from './components/Body';
-import Header from './components/header';
+import Body from './components/body/Body';
+import Header from './components/header/Header';
 
 
 let App = () => {
