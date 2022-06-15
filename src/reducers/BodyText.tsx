@@ -1,4 +1,5 @@
 const SET_NEW_POST = 'SET_NEW_POST';
+const SORT_POST = 'SORT_POST';
 
 let initialState = {
     Posts: [
@@ -39,15 +40,27 @@ const BodyText = (state = initialState, action: any) => {
             copyPost.Posts.unshift(action.NewPost);
             return copyPost;
         }
+        case SORT_POST: {
+            let copyPost = { ...state };
+            copyPost.Posts = [...state.Posts];
+            copyPost.Posts.sort((a: any, b: any) => a[action.sort].localeCompare(b[action.sort]))
+            return
+        }
         default:
             return state;
     }
 }
-
+debugger;
 export default BodyText;
 
 export const setNewPostAC = (NewPost: any) => {
     return {
         type: SET_NEW_POST, NewPost
+    }
+}
+
+export const setSortPostAC = (sort: any) => {
+    return {
+        type: SORT_POST, sort
     }
 }

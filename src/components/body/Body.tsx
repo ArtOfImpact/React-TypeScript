@@ -3,16 +3,33 @@ import './Body.css'
 import Space from '../../photo/iconBody/Space.png'
 import icon_horizontal from '../../photo/iconBody/Icon-Horizontal.svg'
 import bookmark from '../../photo/iconBody/Bookmark.svg'
+import Sort from '../sort/Sort'
+import { useState } from 'react'
+import { setSortPostAC } from '../../reducers/BodyText'
 
 
 let Body = () => {
+
+    const dispatch = useDispatch()
 
     let infoPosts = useSelector((state: any) => state.body.Posts)
 
     let nightMode = useSelector((state: any) => state.header.nightMode)
 
+    const [selectedSort, setSelectedSort] = useState('')
+
+    const sortPost = (sort: any) => {
+        console.log(sort)
+        setSelectedSort(sort);
+        dispatch(setSortPostAC(sort))
+    }
+
     return (
         <div className={nightMode ? 'Body__black' : 'Body__light'}>
+            <Sort onChange={sortPost} value={selectedSort} defaultValue='Sorting' options={[
+                { name: 'Name', value: "Title" },
+                { name: 'Creation time', value: "Data" }
+            ]} />
             {infoPosts.map((post: any, index: number) => {
                 return (
                     <div className='Body'>
