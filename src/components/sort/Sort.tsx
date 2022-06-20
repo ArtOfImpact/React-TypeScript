@@ -3,7 +3,7 @@ import './Sort.css'
 
 let Sort = (props: any) => {
     return (
-        <div>
+        <div className='Sort__container'>
             <select value={props.value} onChange={event => props.onChange(event.target.value)}>
                 <option disabled value=''>{props.defaultValue}</option>
                 {props.options.map((option: any) =>

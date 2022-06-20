@@ -51,6 +51,8 @@
 
 .name {
     padding-left: 10px;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none
 }
 
 .Input__container {

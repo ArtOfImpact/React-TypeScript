@@ -30,6 +30,11 @@
     cursor: pointer;
 }
 
+.Home__menu>a {
+    color: #000 !important;
+    text-decoration: none
+}
+
 .Add__menu {
     background-color: white;
     height: 83px;

@@ -1,0 +1,30 @@
+.SelectedPost {
+    width: 73%;
+    margin: auto;
+}
+
+.SelectedPost__title {
+    padding: 30px 0 30px 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 44px;
+}
+
+.SelectedPost__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SelectedPost__img>img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.SelectedPost__text {
+    color: #8D8E97;
+    padding: 30px 0 30px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}

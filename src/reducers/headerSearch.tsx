@@ -1,12 +1,14 @@
 const SET_USERS = 'SET_USERS';
 // const SET_MENU = 'SET_MENU';
 const NIGHT_MODE = 'NIGHT_MODE';
-// const SEARCH = 'SEARCH';
+const SEARCH = 'SEARCH';
+
 
 let initialState = {
     users: 'Artem Malkin',
     // hiddenMenu: false,
     nightMode: false,
+    search: '',
     // search: false,
 }
 
@@ -23,9 +25,9 @@ const HeaderSearch = (state = initialState, action: any) => {
         case NIGHT_MODE: {
             return { ...state, nightMode: action.nightMode }
         }
-        // case SEARCH: {
-        //     return { ...state, search: action.search }
-        // }
+        case SEARCH: {
+            return { ...state, search: action.search }
+        }
         default:
             return state;
     }
@@ -51,8 +53,8 @@ export const setNightModeAC = (nightMode: boolean) => {
     }
 }
 
-// export const setSearchAC = (search: boolean) => {
-//     return {
-//         type: SEARCH, search
-//     }
-// }
+export const setSearchAC = (search: any) => {
+    return {
+        type: SEARCH, search
+    }
+}

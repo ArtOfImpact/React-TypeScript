@@ -1,0 +1,17 @@
+.Sort__container {
+    padding-top: 20px;
+    width: 17%;
+    display: flex;
+    justify-content: start;
+}
+
+.Sort__container>select {
+    height: 40px;
+    border: 2px solid #5360CD;
+    font-weight: 700;
+    outline: none;
+}
+
+.Sort__container>option {
+    font-weight: 700;
+}

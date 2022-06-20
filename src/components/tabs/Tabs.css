@@ -1,0 +1,90 @@
+.Tabs__container {
+    width: 56%;
+}
+
+.TabsBlack__container {
+    width: 56%;
+    color: white;
+}
+
+.Tabs {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.Tabs__container>hr {
+    border: 1px solid black;
+}
+
+.Tabs__one {
+    /* position: relative; */
+    padding-left: 25px;
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+.TabsActive__one {
+    padding-left: 25px;
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+    color: #5360CD;
+}
+
+.Tabs__two {
+    /* position: relative; */
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+.TabsActive__two {
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+    color: #5360CD;
+}
+
+.Tabs__three {
+    /* position: relative; */
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+}
+
+.TabsActive__three {
+    cursor: pointer;
+    padding-right: 25px;
+    font-weight: 700;
+    color: #5360CD;
+}
+
+.Tabs__one::before {
+    display: none;
+    content: '';
+    position: absolute;
+    border: 2px solid #5360CD;
+    width: 85%;
+    margin-top: 28px;
+    left: 0px;
+}
+
+.Tabs__two::before {
+    display: none;
+    content: '';
+    position: absolute;
+    border: 2px solid #5360CD;
+    width: 80%;
+    margin-top: 28px;
+}
+
+.Tabs__three::before {
+    display: none;
+    content: '';
+    position: absolute;
+    border: 2px solid #5360CD;
+    width: 70%;
+    margin-top: 28px;
+}

@@ -6,6 +6,7 @@ import Light from '../../photo/iconMenu/Light.svg'
 import activeLight from '../../photo/nightMode/Light.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { setNightModeAC } from '../../reducers/HeaderSearch'
+import { NavLink } from 'react-router-dom';
 
 let Menu = (props: any) => {
 
@@ -35,7 +36,7 @@ let Menu = (props: any) => {
                 <span>Artem Malkin</span>
             </div> : null}
             <div className='Home__menu'>
-                <span>Home</span>
+                <NavLink to='/'>Home</NavLink>
             </div>
             {Users ? <div className='Add__menu' onClick={() => props.setPost(!props.Post)}>
                 <span>Add post</span>
